@@ -11,12 +11,25 @@ export default defineType({
       type: 'string',
     }),
 		defineField({
+			name:'slug',
+			description:`The url for this talent profile, Don't leave it empty! `,
+			type:'slug',
+			options:{
+				source:'name'
+			}
+		}),
+		defineField({
 			name:'data',
 			type:'talent'
 		}),
-	
-  
   ],
+	preview:{
+		select:{
+			title:'name',
+			media:'data.profile'
+		}
+	}
+
 
  
 })

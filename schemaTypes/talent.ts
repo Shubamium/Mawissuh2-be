@@ -5,7 +5,10 @@ export default defineType({
   title: 'talent',
   type: 'object',
   fields: [
-
+		defineField({
+			name:'profile',
+			type:'image'
+		}),
 		defineField({
 			name:'briefing',
 			type:'string'
